@@ -1,0 +1,14 @@
+services:
+  - name: telegram-bot
+    ports:
+      - port: 3000
+        http_path: /
+    env:
+      - key: BOT_TOKEN
+        secret: true
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
+    docker:
+      image: koyeb/app
